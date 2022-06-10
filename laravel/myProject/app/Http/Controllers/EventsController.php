@@ -8,7 +8,11 @@ class EventsController extends Controller
 {
     public function show($id)
     {
-        dd($id);
+        $data = [
+            'name' => 'Laravel Hacking and Coffee',
+            'date' => date('Y-m-d')
+        ];
+        return view('events.show')->with($data);
     }
 
     public function category($category, $subcategory = 'all')
