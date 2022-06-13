@@ -20,4 +20,15 @@ class EventsController extends Controller
         # code...
         dd("Category: {$category} Subcategory: {$subcategory}");
     }
+
+    public function index()
+    {
+        # code...
+        $events = [
+            'Laravel Hacking and Coffee',
+            'IoT with Raspberry Pi',
+            'Free Vue.js Lessons'
+        ];
+        return view('events.show')->with('events', $events);
+    }
 }

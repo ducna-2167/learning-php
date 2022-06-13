@@ -1,2 +1,5 @@
-{{-- Output the $id variable. --}}
-<p>{{ $name }}  event ID {{ $date }}.</p>
+<ul>
+    @foreach ($events as $event)
+    <li>{{ $event }}</li>
+    @endforeach
+</ul>
